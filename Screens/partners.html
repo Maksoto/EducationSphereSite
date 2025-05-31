@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наши партнеры — EduSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #000;
+      --secondary: #7F8285;
+      --light: #F9F9F9;
+      --dark: #1A1B22;
+      --background: #FFF;
+      --accent: #FFDB4D;
+      --border: #E0E0E0;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'YS Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    @font-face {
+      font-family: 'YS Text';
+      src: url('https://yastatic.net/s3/home/fonts/ys/1/text-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--background);
+      padding: 0;
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    
+    .header h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    
+    .header h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+    
+    .header p {
+      font-size: 18px;
+      color: var(--secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 100px;
+      margin-bottom: 60px;
+    }
+    
+    .partner-card {
+      background: var(--background);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 0;
+      background-color: var(--accent);
+      transition: height 0.4s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .partner-card:hover::before {
+      height: 100%;
+    }
+    
+    .partner-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin: 0 auto 20px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: all 0.4s ease;
+    }
+    
+    .partner-card:hover .partner-logo {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    .partner-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    
+    .partner-card p {
+      color: var(--secondary);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .partner-type {
+      display: inline-block;
+      padding: 4px 12px;
+      background-color: var(--accent);
+      color: var(--dark);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    
+    .testimonial-section {
+      background-color: var(--light);
+      padding: 60px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial-section::before {
+      content: '"';
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 120px;
+      color: rgba(0,0,0,0.05);
+      font-family: serif;
+      line-height: 1;
+    }
+    
+    .testimonial-text {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .testimonial-author img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 3px solid var(--accent);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn:hover {
+      background-color: #333;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .btn i {
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 36px;
+      }
+      
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial-section {
+        padding: 30px;
+      }
+      
+      .testimonial-text {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header" data-aos="fade-up">
+      <h1><i class="fas fa-handshake"></i> Наши партнеры</h1>
+      <p>Вместе с ведущими образовательными организациями мы создаем будущее обучения</p>
+    </div>
+    
+    <div class="partners-grid">
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="../IMG_0652.PNG" alt="Школа №2" class="partner-logo">
+        <h3>Школа №2</h3>
+        <p>Пилотная школа внедрения цифровых технологий в образовательный процесс</p>
+        <span class="partner-type">Образовательное учреждение</span>
+      </div>
+      
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="../firebase.png" alt="Firebase" class="partner-logo">
+        <h3>Firebase</h3>
+        <p>Платформа Google для разработки мобильных и веб-приложений с облачной инфраструктурой, обеспечивающая Class Compass надежную аутентификацию, хранение данных и аналитику в реальном времени</p>
+        <span class="partner-type">Технологический партнер</span>
+      </div>
+      
+      <div class="partner-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="../Без названия.jpg" alt="Министерство образования" class="partner-logo">
+        <h3>Министерство образования</h3>
+        <p>Официальный партнер в рамках национального проекта "Образование"</p>
+        <span class="partner-type">Государственный партнер</span>
+      </div>
+    </div>
+
+    
+    <div style="text-align: center;">
+      <a href="../index.html" class="btn">
+        <i class="fas fa-arrow-left"></i> Назад на главную
+      </a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>

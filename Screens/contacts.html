@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Помощь — EduSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #000;
+      --secondary: #7F8285;
+      --light: #F9F9F9;
+      --dark: #1A1B22;
+      --background: #FFF;
+      --accent: #FFDB4D;
+      --border: #E0E0E0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'YS Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--background);
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    h1 {
+      font-size: 42px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+    }
+    
+    .help-item {
+      margin-bottom: 30px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .help-item:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .help-item h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .help-item h2 i {
+      margin-right: 15px;
+      color: var(--accent);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 40px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #333;
+      transform: translateY(-3px);
+    }
+    
+    .btn i {
+      margin-right: 10px;
+    }
+  </style>
+  <title>Контакты — EduSphere</title>
+</head>
+<body>
+  <div class="container">
+    <h1 data-aos="fade-up"><i class="fas fa-address-book"></i> Контакты</h1>
+    
+    <div class="help-item" data-aos="fade-up" data-aos-delay="100">
+      <h2><i class="fas fa-headset"></i> Техническая поддержка</h2>
+      <p>Email: <a href="mailto:support@edusphere.ru">support@edusphere.ru</a></p>
+      <p>Телефон: +7 (800) 123-45-67</p>
+      <p>Часы работы: Пн-Пт с 9:00 до 18:00</p>
+    </div>
+    
+    <div class="help-item" data-aos="fade-up" data-aos-delay="200">
+      <h2><i class="fas fa-map-marker-alt"></i> Наш офис</h2>
+      <p>Адрес: г. Москва, ул. Образовательная, д. 1</p>
+      <p>Для посещения необходимо предварительно записаться</p>
+    </div>
+    
+    <a href="../index.html" class="btn" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-arrow-left"></i> Назад на главную
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>

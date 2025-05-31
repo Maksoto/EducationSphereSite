@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Помощь — EduSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #000;
+      --secondary: #7F8285;
+      --light: #F9F9F9;
+      --dark: #1A1B22;
+      --background: #FFF;
+      --accent: #FFDB4D;
+      --border: #E0E0E0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'YS Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--background);
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    h1 {
+      font-size: 42px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+    }
+    
+    .help-item {
+      margin-bottom: 30px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .help-item:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .help-item h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .help-item h2 i {
+      margin-right: 15px;
+      color: var(--accent);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 40px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #333;
+      transform: translateY(-3px);
+    }
+    
+    .btn i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 data-aos="fade-up"><i class="fas fa-question-circle"></i> Помощь</h1>
+    
+    <div class="help-item" data-aos="fade-up" data-aos-delay="100">
+      <h2><i class="fas fa-mobile-alt"></i> Проблемы с приложением</h2>
+      <p>Если приложение не запускается или работает некорректно, попробуйте следующие действия:</p>
+      <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>Обновите приложение до последней версии</li>
+        <li>Перезагрузите устройство</li>
+        <li>Очистите кэш приложения</li>
+      </ul>
+    </div>
+    
+    <div class="help-item" data-aos="fade-up" data-aos-delay="200">
+      <h2><i class="fas fa-book"></i> Работа с учебными материалами</h2>
+      <p>Как получить доступ к учебникам и заданиям:</p>
+      <ol style="margin-top: 10px; margin-left: 20px;">
+        <li>Авторизуйтесь в системе</li>
+        <li>Выберите нужный предмет в меню</li>
+        <li>Откройте раздел с материалами</li>
+      </ol>
+    </div>
+    
+    <div class="help-item" data-aos="fade-up" data-aos-delay="300">
+      <h2><i class="fas fa-user-graduate"></i> Регистрация и вход</h2>
+      <p>Если вы забыли пароль или не можете войти в аккаунт:</p>
+      <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>Воспользуйтесь функцией восстановления пароля</li>
+        <li>Проверьте правильность ввода email/логина</li>
+        <li>Обратитесь к администратору вашей школы</li>
+      </ul>
+    </div>
+    
+    <a href="../index.html" class="btn" data-aos="fade-up" data-aos-delay="400">
+      <i class="fas fa-arrow-left"></i> Назад на главную
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
